@@ -219,9 +219,9 @@ ABS (Absolute): Absolute value. Converts negative numbers to positive.
 DISTINCTCOUNT / NOBLANK: Counts unique occurrences. The NOBLANK version is better when data might contain empty rows. 
 
 
-<a name="polska-wersja-językowa-pl"></a>🇵🇱 Polska wersja językowa (PL)  
+# <a name="polska-wersja-językowa-pl"></a>🇵🇱 Polska wersja językowa (PL)  
 
-## Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w projekcie. Kod został podzielony na obszary analityczne.  
+# Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w projekcie. Kod został podzielony na obszary analityczne.  
 # 1. Analiza i Lojalność Klientów (Customer Analysis & Loyalty)  
 
 Returning Customers (Powracający Klienci)  
