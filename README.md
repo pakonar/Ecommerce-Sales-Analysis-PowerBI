@@ -140,4 +140,4 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 
 ---
 ## 5. Kontakt
-[www.linkedin.com/in/patryk-konarzewski-1a1b45182]
+[www.linkedin.com/in/patryk-konarzewski-data]
