@@ -52,7 +52,7 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 ## 4. Analiza Biznesowa – Pytania, Wnioski i Rekomendacje
 
 ### I. Kondycja Finansowa i Sezonowość
-![Sales Overview Dashboard](SalesOverview.png)
+![Sales Overview Dashboard](Sales_Overview.png)
 
 **a. Pytania Biznesowe:**
 *   Jak kształtują się przychody w czasie i czy widoczna jest sezonowość sprzedaży?
@@ -72,7 +72,7 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 ---
 
 ### II. Efektywność Produktowa i Zasada Pareto
-![Product Performance Dashboard](Product Performance - strona 3.png)
+![Product Performance Dashboard](Product_Performance.png)
 
 **a. Pytania Biznesowe:**
 *   Czy występuje koncentracja przychodów (Zasada Pareto)?
@@ -96,7 +96,7 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 ---
 
 ### III. Profil i Lojalność Klienta
-![Customer Behavior Dashboard](Customer Behavior & Market Insights - strona 2.png)
+![Customer Behavior Dashboard](Customer_Behavior_&_Market_Insights.png)
 
 **a. Pytania Biznesowe:**
 *   Czy wzrost firmy opiera się na pozyskiwaniu nowych klientów, czy na utrzymaniu obecnych?
@@ -118,8 +118,8 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 ---
 
 ### IV. Strategia Rynkowa i Geografia
-![Sales Overview Dashboard](Sales Overview - strona 1.png)
-![Customer Behavior Dashboard](Customer Behavior & Market Insights - strona 2.png)
+![Sales Overview Dashboard](Sales_Overview.png)
+![Customer Behavior Dashboard](Customer_Behavior_&_Market_Insights.png)
 
 **a. Pytania Biznesowe:**
 *   Czy firma jest uzależniona od jednego rynku (Ryzyko Koncentracji)?
