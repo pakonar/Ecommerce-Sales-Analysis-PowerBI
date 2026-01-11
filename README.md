@@ -52,7 +52,7 @@ W projekcie zastosowano **Microsoft Power BI** z naciskiem na przygotowanie dany
 ## 4. Analiza Biznesowa – Pytania, Wnioski i Rekomendacje
 
 ### I. Kondycja Finansowa i Sezonowość
-![Sales Overview Dashboard](Sales Overview - strona 1.png)
+![Sales Overview Dashboard](Sales Overview - strona 1.PNG)
 
 **a. Pytania Biznesowe:**
 *   Jak kształtują się przychody w czasie i czy widoczna jest sezonowość sprzedaży?
