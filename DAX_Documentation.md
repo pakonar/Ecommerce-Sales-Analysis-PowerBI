@@ -4,7 +4,7 @@ Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w pr
 
 ## 1. Analiza i Lojalność Klientów (Customer Analysis & Loyalty)
 
-**Returning Customers (Powracający Klienci)**
+**Returning Customers (Powracający Klienci)**  
 Oblicza liczbę klientów, którzy dokonali zakupu w bieżącym miesiącu ORAZ dokonali zakupu kiedykolwiek wcześniej.
 ```
 Returning Customers =
@@ -32,7 +32,7 @@ COUNTROWS(
     -- Funkcja INTERSECT zwraca część wspólną dwóch list: klientów, którzy są na liście "Obecni" I na liście "Przeszli".
 )
 ```
-**One-time Buyers (Jednorazowi Klienci)**
+**One-time Buyers (Jednorazowi Klienci)**  
 Liczy klientów, którzy w całej historii sklepu zrobili zakupy tylko raz.
 ```
 One-time Buyers =
@@ -52,13 +52,13 @@ COUNTROWS(
     )
 )
 ```
-**New Customers (Nowi Klienci)**
+**New Customers (Nowi Klienci)**  
 Liczba klientów, którzy kupili coś w tym okresie, ale nie są powracający (czyli kupują pierwszy raz).
 ```
 New Customers =
 [Total Customers] - [Returning Customers]
 ```
-Retention Rate % (Wskaźnik Retencji)
+**Retention Rate % (Wskaźnik Retencji)**  
 Jaki procent obecnych klientów to klienci lojalni (powracający).
 ```
 Retention Rate % =
