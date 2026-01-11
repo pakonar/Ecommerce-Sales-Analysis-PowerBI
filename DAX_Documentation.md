@@ -221,8 +221,8 @@ DISTINCTCOUNT / NOBLANK: Counts unique occurrences. The NOBLANK version is bette
 
 <a name="polska-wersja-językowa-pl"></a>🇵🇱 Polska wersja językowa (PL)  
 
-##Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w projekcie. Kod został podzielony na obszary analityczne.  
-##1. Analiza i Lojalność Klientów (Customer Analysis & Loyalty)  
+## Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w projekcie. Kod został podzielony na obszary analityczne.  
+# 1. Analiza i Lojalność Klientów (Customer Analysis & Loyalty)  
 
 Returning Customers (Powracający Klienci)  
 Oblicza liczbę klientów, którzy dokonali zakupu w bieżącym miesiącu ORAZ dokonali zakupu kiedykolwiek wcześniej.
