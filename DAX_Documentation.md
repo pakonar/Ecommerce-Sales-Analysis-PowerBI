@@ -14,7 +14,7 @@ Poniższy dokument zawiera kompletny zestaw miar języka DAX wykorzystanych w pr
 
 **Returning Customers (Powracający Klienci)**
 Oblicza liczbę klientów, którzy dokonali zakupu w bieżącym miesiącu ORAZ dokonali zakupu kiedykolwiek wcześniej.
-```dax
+```
 Returning Customers =
 VAR CurrentCustomers = VALUES('Online Retail'[CustomerID])
 -- Tworzy listę unikalnych ID klientów, którzy kupili coś w OBECNIE wybranym okresie (np. w Listopadzie 2011).
@@ -39,10 +39,10 @@ COUNTROWS(
     INTERSECT(CurrentCustomers, PastCustomers)
     -- Funkcja INTERSECT zwraca część wspólną dwóch list: klientów, którzy są na liście "Obecni" I na liście "Przeszli".
 )
-One-time Buyers (Jednorazowi Klienci)
+```
+**One-time Buyers (Jednorazowi Klienci)**
 Liczy klientów, którzy w całej historii sklepu zrobili zakupy tylko raz.
-code
-Dax
+```
 One-time Buyers =
 COUNTROWS(
     -- Zlicza wiersze tabeli, która powstanie w wyniku funkcji FILTER.
@@ -59,6 +59,7 @@ COUNTROWS(
         -- Warunek: Jeśli liczba faktur w całej historii wynosi dokładnie 1, zachowaj tego klienta.
     )
 )
+```
 New Customers (Nowi Klienci)
 Liczba klientów, którzy kupili coś w tym okresie, ale nie są powracający (czyli kupują pierwszy raz).
 code
