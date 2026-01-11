@@ -440,8 +440,8 @@ DISTINCTCOUNT('Online Retail'[CustomerID])
 Total Products =
 DISTINCTCOUNTNOBLANK('Online Retail'[StockCode])
 -- Liczy unikalne kody produktów, ignorując puste wartości (BLANK).
-```  
-##5. Słownik użytych funkcji DAX  
+```
+## 5. Słownik użytych funkcji DAX  
 CALCULATE: Najważniejsza funkcja w DAX. Pozwala zmienić kontekst obliczeń (np. "policz sprzedaż, ale tylko dla typu 'Sale'").  
 CALCULATETABLE: To samo co CALCULATE, ale zwraca całą tabelę, a nie jedną liczbę. Użyte do stworzenia listy PastCustomers.  
 VAR ... RETURN: Zmienne. Pozwalają zapisać wynik obliczenia, nazwać go i użyć później. Poprawiają czytelność i wydajność kodu.  
