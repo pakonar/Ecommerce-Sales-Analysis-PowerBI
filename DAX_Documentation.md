@@ -65,7 +65,7 @@ Retention Rate % =
 DIVIDE([Returning Customers], [Total Customers], 0)
 -- Dzieli liczbę powracających przez ogólną liczbę klientów.
 ```
-Lifetime Retention Rate % (Wskaźnik Powracających Klientów - Całkowity)
+**Lifetime Retention Rate % (Wskaźnik Powracających Klientów - Całkowity)**  
 Określa, jaki procent klientów widocznych w danym okresie to osoby, które w całej historii współpracy z firmą dokonały więcej niż jednego zakupu. Miara ta rozwiązuje problem analizy w krótkich oknach czasowych, patrząc na "cykl życia" klienta.
 ```
 Lifetime Retention Rate % =
@@ -82,7 +82,7 @@ RETURN
 DIVIDE(RepeatCust, TotalCust, 0)
 -- Dzieli liczbę powracających przez ogół klientów, dając procent lojalnej bazy (np. 70%).
 ```
-Purchase Frequency (Częstotliwość Zakupów)
+**Purchase Frequency (Częstotliwość Zakupów)**  
 Mówi nam, ile średnio transakcji dokonuje jeden klient. Jest to kluczowy wskaźnik lojalności – im wyższy wynik, tym silniejszy nawyk zakupowy mają klienci.
 ```
 Purchase Frequency =
@@ -95,8 +95,8 @@ DIVIDE(
     -- Zabezpieczenie przed dzieleniem przez zero.
 )
 ```
-2. Analiza Sprzedaży i Produktów (Sales Performance)
-% of GT Net Revenue (Udział w Całkowitym Przychodzie)
+##2. Analiza Sprzedaży i Produktów (Sales Performance)  
+**% of GT Net Revenue (Udział w Całkowitym Przychodzie)**  
 Pokazuje, jaki procent całkowitej sprzedaży firmy stanowi sprzedaż danego produktu (lub kategorii). Kluczowe do analizy Pareto.
 ```
 % of GT Net Revenue =
@@ -115,7 +115,7 @@ RETURN
 DIVIDE(CurrentProductRevenue, TotalGlobalRevenue)
 -- Bezpieczne dzielenie: (Sprzedaż Produktu) / (Sprzedaż Całkowita).
 ```
-Average Order Value (AOV - Średnia Wartość Zamówienia)
+**Average Order Value (AOV - Średnia Wartość Zamówienia)**  
 Średnia wartość koszyka zakupowego (tylko dla transakcji sprzedaży, bez zwrotów).
 ```
 Average Order Value =
@@ -139,7 +139,7 @@ RETURN
 DIVIDE(TotalRevenueSales, TotalInvoicesSales, 0)
 -- Dzieli przychód przez liczbę zamówień. Jeśli brak zamówień, zwraca 0.
 ```
-Average Units per Order (Średnia liczba sztuk w zamówieniu)
+**Average Units per Order (Średnia liczba sztuk w zamówieniu)**  
 Ile jest średnio produktów w koszyku.
 ```
 Average Units per Order =
@@ -162,7 +162,7 @@ RETURN
 DIVIDE(TotalUnitsSales, TotalInvoicesSales, 0)
 -- Dzieli liczbę sztuk przez liczbę zamówień.
 ```
-Gross Revenue (Przychód Brutto)
+**Gross Revenue (Przychód Brutto)**  
 Całkowita wartość sprzedaży przed odjęciem zwrotów.
 ```
 Gross Revenue =
@@ -173,9 +173,9 @@ CALCULATE(
     -- ...biorąc pod uwagę tylko wiersze oznaczone jako "Sale" (Sprzedaż).
 )
 ```
-3. Analiza Zwrotów (Returns Analysis)
+##3. Analiza Zwrotów (Returns Analysis)  
 
-Return Value (Wartość Zwrotów)
+**Return Value (Wartość Zwrotów)**  
 Łączna kwota zwróconych towarów.
 ```
 Return Value =
@@ -186,7 +186,7 @@ CALCULATE(
     -- ...biorąc pod uwagę tylko wiersze oznaczone jako "Return" (Zwrot).
 )
 ```
-Return Rate % (Wskaźnik Zwrotów)
+**Return Rate % (Wskaźnik Zwrotów)**  
 Jaki procent przychodu brutto tracimy przez zwroty.
 ```
 Return Rate % =
@@ -199,8 +199,8 @@ DIVIDE(
     -- W razie błędu zwraca 0.
 )
 ```
-4. Podstawowe Liczniki (Base Measures)
-Transaction Count (Liczba Transakcji)
+##4. Podstawowe Liczniki (Base Measures)
+**Transaction Count (Liczba Transakcji)**
 ```
 Transaction Count =
 CALCULATE(
@@ -222,14 +222,14 @@ Total Products =
 DISTINCTCOUNTNOBLANK('Online Retail'[StockCode])
 -- Liczy unikalne kody produktów, ignorując puste wartości (BLANK).
 ```
-##5. Słownik użytych funkcji DAX
-CALCULATE: Najważniejsza funkcja w DAX. Pozwala zmienić kontekst obliczeń (np. "policz sprzedaż, ale tylko dla typu 'Sale'").
-CALCULATETABLE: To samo co CALCULATE, ale zwraca całą tabelę, a nie jedną liczbę. Użyte do stworzenia listy PastCustomers.
-VAR ... RETURN: Zmienne. Pozwalają zapisać wynik obliczenia, nazwać go i użyć później. Poprawiają czytelność i wydajność kodu.
-ALL: Funkcja "usuwająca filtry". Mówi: "Ignoruj to, co użytkownik wybrał we fragmentatorze (np. datę)".
-REMOVEFILTERS: Nowocześniejsza, bardziej precyzyjna wersja ALL służąca do usuwania filtrów z konkretnych kolumn (użyta w % of GT).
-VALUES: Zwraca listę unikalnych wartości z kolumny, widocznych w obecnym filtrze.
-INTERSECT: Funkcja zbiorów. Porównuje dwie listy i zwraca tylko te elementy, które występują w obu. Kluczowa do analizy powracających klientów.
-DIVIDE: "Bezpieczne dzielenie". Chroni przed błędem "dzielenie przez zero" (np. gdy w danym dniu nie było sprzedaży).
-ABS (Absolute): Wartość bezwzględna. Zamienia liczby ujemne na dodatnie (przydatne przy zwrotach).
-DISTINCTCOUNT / DISTINCTCOUNTNOBLANK: Zlicza unikalne wystąpienia. Wersja NOBLANK jest lepsza, gdy w danych mogą być puste wiersze.
+##5. Słownik użytych funkcji DAX  
+CALCULATE: Najważniejsza funkcja w DAX. Pozwala zmienić kontekst obliczeń (np. "policz sprzedaż, ale tylko dla typu 'Sale'").  
+CALCULATETABLE: To samo co CALCULATE, ale zwraca całą tabelę, a nie jedną liczbę. Użyte do stworzenia listy PastCustomers.  
+VAR ... RETURN: Zmienne. Pozwalają zapisać wynik obliczenia, nazwać go i użyć później. Poprawiają czytelność i wydajność kodu.  
+ALL: Funkcja "usuwająca filtry". Mówi: "Ignoruj to, co użytkownik wybrał we fragmentatorze (np. datę)".  
+REMOVEFILTERS: Nowocześniejsza, bardziej precyzyjna wersja ALL służąca do usuwania filtrów z konkretnych kolumn (użyta w % of GT).  
+VALUES: Zwraca listę unikalnych wartości z kolumny, widocznych w obecnym filtrze.  
+INTERSECT: Funkcja zbiorów. Porównuje dwie listy i zwraca tylko te elementy, które występują w obu. Kluczowa do analizy powracających klientów.  
+DIVIDE: "Bezpieczne dzielenie". Chroni przed błędem "dzielenie przez zero" (np. gdy w danym dniu nie było sprzedaży).  
+ABS (Absolute): Wartość bezwzględna. Zamienia liczby ujemne na dodatnie (przydatne przy zwrotach).  
+DISTINCTCOUNT / DISTINCTCOUNTNOBLANK: Zlicza unikalne wystąpienia. Wersja NOBLANK jest lepsza, gdy w danych mogą być puste wiersze.  
